@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý khóa học</title>
+    <link rel="stylesheet" href="./css/courseManagement.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div id="header-one">
+            <img src="./img/logo.png" alt="Logo">
+        </div>
+        <div id="header-two">
+            <img src="./img/bell.png" alt="Bell">
+            <button>Đăng Xuất</button>
+        </div>
+    </header>
+    
+    <main>
+        <nav>
+            <p>Rikkei Academy</p>
+            <div id="boder"></div>
+            <div id="form-one">
+                <i class="fa-solid fa-house"></i>
+                <a href="javascript:dashboard()">Bảng điều khiển</a><br>
+            </div>
+            <div id="form-two">
+                <i class="fa-solid fa-house"></i>
+                <a href="javascript:classManagement()">Quản lý lớp học</a><br>
+            </div>
+            <div id="form-three">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <a href="javascript:studentManagement()">Quản lý sinh viên</a><br>
+            </div>
+            <div id="form-four">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+                <a href="javascript:courseManagement()">Quản lý khóa học ></a>
+            </div>
+        </nav>
+        <section>
+            <div id="control">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newCourse">
+                    Tạo mới khóa học
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="newCourse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Tạo mới khóa học</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form action="#">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Mã khóa học</span>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="courseId" placeholder="Nhập mã khóa học">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Tên khóa học</span>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="courseName" placeholder="Nhập tên khóa học">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Thời gian</span>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="courseTime" >
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Trạng thái</span>
+                                <input type="radio" name="status" id="active" value="Hoạt động" checked/><label
+                                    for="active">Hoạt Động</label>
+                                <input type="radio" name="status" id="inactive" value="Không hoạt động" /><label
+                                    for="inactive">Không hoạt Động</label>
+                            </div>
+                            
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                          <button type="button" class="btn btn-primary" id="btnSubmit">Thêm mới</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <input type="text" id="searchCourse" name="searchCourse" placeholder="Nhập tên khóa học cần tìm">
+                <button id="btnSearch">Tìm kiếm</button><br>
+                <label for="sortCourse">Sắp xếp:</label>
+                <select name="sortCourse" id="sortCourse">
+                    <option value="courseNameASC">Sắp xếp tên khóa học tăng dần</option>
+                    <option value="courseNameDESC">Sắp xếp tên khóa học giảm dần</option>
+                </select>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã khóa học</th>
+                        <th>Tên khóa học</th>
+                        <th>Thời gian</th>
+                        <th>Trạng thái</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="content">
+                    
+                </tbody>
+            </table>
+            <div id="page">
+                <a id="preview" href="javascript:previewPage()">Preview</a>
+                <ul id="listPage">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+            </ul>
+            <a id="next" href="javascript:nextPage()">Next</a>
+            </div>
+            
+        </section>
+    </main>  
+    <footer>
+        <p>Copyright: Rikkei Academy @2023</p>
+    </footer> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./javascript/courseManagement.js"></script>
+</body>
+</html>

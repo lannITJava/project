@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+body{
+    font-family: Kumbh Sans;
+}
+header{
+    width: 1439px;
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+}
+#header-one{
+    width: 241px;
+    height: 95px;
+    background-color: rgba(74, 75, 104, 1);
+}
+#header-one img{
+    width: 65px;
+    height: 65px;
+    margin: 17px 88px;   
+}
+#header-two{
+    width: 1198px;
+    height: 95px;
+    background-color: rgba(252, 250, 250, 1);
+    display: flex;
+    justify-content: space-between;
+}
+#header-two #text{
+    width: 670px;
+    height: 66px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.84px;
+    padding-left: 100px;
+    margin-top: 40px;
+    color: rgba(66, 66, 66, 1);
+   
+}
+#header-two button{
+    width: 120px;
+    height: 40px;
+    background-color: rgba(80, 156, 219, 1);
+    color: rgba(252, 250, 250, 1);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    margin-top: 35px;
+    margin-right: 150px;
+}
+#header-two img{
+    width: 22.84px;
+    height: 23.33px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+main{
+    width: 1439px;
+    height: 694px;
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    width: 241px;
+    height: 694px;
+    background-color: rgba(74, 75, 104, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 17.36px;
+}
+nav p{
+    padding-top: 10px;
+    text-align: center;
+}
+nav #boder{
+    height: 1px;
+    background-color: rgba(189, 189, 189, 1);
+    margin-top: 35px;
+}
+nav #form-one{
+    width: 192px;
+    height: 40px;
+    background-color: rgba(68, 109, 187, 1);
+    margin-top: 20px;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 11px;
+}
+nav #form-one i,
+nav #form-two i,
+nav #form-three i,
+nav #form-four i{
+    width: 16px;
+    height: 16px;
+    margin-right: 15px;
+}
+nav #form-two,
+nav #form-three,
+nav #form-four{
+    width: 192px;
+    height: 40px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 15px;
+}
+nav a,
+#header-two button a{
+    text-decoration: none;
+   color:rgba(255, 255, 255, 1);
+}
+h1{
+    width: 776px;
+    height: 90px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44.65px;
+    text-align: center;
+    margin-top: 22px;
+    color: rgba(79, 79, 79, 1);
+}
+article{
+    width: 1198px;
+    height: 694px;
+}
+article>p{
+    width: 432px;
+    height: 30px;
+    color: rgba(79, 79, 79, 1);
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+section div i{
+    width: 36px;
+    height: 36px;
+    background-color: rgba(239, 243, 250, 1);
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 10px;
+    float: left;
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
+section{
+    width: 758px;
+    height: 458px;
+    margin-left: 100px;
+}
+#courseInfo{
+    margin-bottom: 51px;
+    padding-top: 68px;
+}
+section h3{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29.77px;
+    color: rgba(79, 79, 79, 1);
+    
+}
+section p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18.63px;
+    color: rgba(79, 79, 79, 1);
+    margin-top: 5px;
+}
+#classInfo{
+    margin-bottom: 51px;
+}
+#class p,
+#student p{
+    padding-left: 155px;
+}
+article button{
+    width: 181px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: rgba(74, 75, 104, 1);
+    border: none;
+    position: fixed;
+    right: 150px;
+    bottom: 220px;
+    color: rgba(252, 250, 250, 1);
+}
+footer{
+    text-align: center;
+}

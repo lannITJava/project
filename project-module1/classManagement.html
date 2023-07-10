@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý lớp học</title>
+    <link rel="stylesheet" href="./css/classManagement.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div id="header-one">
+            <img src="./img/logo.png" alt="Logo">
+        </div>
+        <div id="header-two">
+            <img src="./img/bell.png" alt="Bell">
+            <button>Đăng Xuất</button>
+        </div>
+    </header>
+    
+    <main>
+        <nav>
+            <p>Rikkei Academy</p>
+            <div id="boder"></div>
+            <div id="form-one">
+                <i class="fa-solid fa-house"></i>
+                <a href="javascript:dashboard()">Bảng điều khiển</a><br>
+            </div>
+            <div id="form-two">
+                <i class="fa-solid fa-house"></i>
+                <a href="javascript:classManagement()">Quản lý lớp học ></a><br>
+            </div>
+            <div id="form-three">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <a href="javascript:studentManagement()">Quản lý sinh viên</a><br>
+            </div>
+            <div id="form-four">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+                <a href="javascript:courseManagement()">Quản lý khóa học</a>
+            </div>
+        </nav>
+    </main>  
+    <footer>
+        <p>Copyright: Rikkei Academy @2023</p>
+    </footer> 
+    <script src="./javascript/classManagement.js"></script>
+</body>
+</html>

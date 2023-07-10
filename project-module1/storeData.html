@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu trúc dữ liệu project</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Khóa học chứa 1 mảng các lớp
+            Lớp chứa 1 mảng các sinh viên
+        */
+        let studentManagementStore = [
+            {
+                "courseId": "C001",
+                "courseName": "Javascript Fullstack",
+                "courseTime": 1200,
+                "status": "active",
+                "arrClass": [
+                    {
+                        "classId": "L001",
+                        "className": "JS230508",
+                        "descriptions": "Lớp học Fukuoka",
+                        "studentNumber": 20,
+                        "teacher": "Nguyễn Duy Quang",
+                        "status": 1, //1: chờ lớp, 2: hoạt động, 3: kết thúc
+                        "arrStudent": [
+                            {
+                                "studentId": "SV001",
+                                "studentName": "Nguyễn Van B",
+                                "year": 2000,
+                                "address": "Hà Nội",
+                                "email": "b@gmail.com",
+                                "phone": "0123456789",
+                                "sex": true,
+                                "status": 1,//1: chờ lớp, 2: đang học, 3: bảo lưu, 4: đình chỉ, 5: tốt nghiệp
+                            },
+                            {
+                                "studentId": "SV002",
+                                "studentName": "Nguyễn Van C",
+                                "year": 2001,
+                                "address": "Đà Nẵng",
+                                "email": "c@gmail.com",
+                                "phone": "0123456789",
+                                "sex": false,
+                                "status": 2,//1: chờ lớp, 2: đang học, 3: bảo lưu, 4: đình chỉ, 5: tốt nghiệp
+                            }
+                        ]
+                    },
+                    {
+                        "classId": "L002",
+                        "className": "JS230629",
+                        "descriptions": "Lớp học Fukuoka",
+                        "studentNumber": 29,
+                        "teacher": "Nguyễn Văn A",
+                        "status": 3, //1: chờ lớp, 2: hoạt động, 3: kết thúc
+                        "arrStudent": [
+                            {
+                                "studentId": "SV003",
+                                "studentName": "Nguyễn Van D",
+                                "year": 2000,
+                                "address": "Hà Nội",
+                                "email": "b@gmail.com",
+                                "phone": "0123456789",
+                                "sex": true,
+                                "status": 1,//1: chờ lớp, 2: đang học, 3: bảo lưu, 4: đình chỉ, 5: tốt nghiệp
+                            },
+                            {
+                                "studentId": "SV004",
+                                "studentName": "Nguyễn Van E",
+                                "year": 2001,
+                                "address": "Đà Nẵng",
+                                "email": "c@gmail.com",
+                                "phone": "0123456789",
+                                "sex": false,
+                                "status": 2,//1: chờ lớp, 2: đang học, 3: bảo lưu, 4: đình chỉ, 5: tốt nghiệp
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "courseId": "C002",
+                "courseName": "Java Fullstack",
+                "courseTime": 1000,
+                "status": "active",
+                "arrClass": [
+                    {
+                        "classId": "L001",
+                        "className": "JS230508",
+                        "descriptions": "Lớp học Fukuoka",
+                        "studentNumber": 20,
+                        "teacher": "Nguyễn Duy Quang",
+                        "status": 1, //1: chờ lớp, 2: hoạt động, 3: kết thúc
+                        "arrStudent": [
+                            {
+                                "studentId": "SV001",
+                                "studentName": "Nguyễn Van B",
+                                "year": 2000,
+                                "address": "Hà Nội",
+                                "email": "b@gmail.com",
+                                "phone": "0123456789",
+                                "sex": true,
+                                "status": 1,//1: chờ lớp, 2: đang học, 3: bảo lưu, 4: đình chỉ, 5: tốt nghiệp
+                            },
+                            {
+                                "studentId": "SV002",
+                                "studentName": "Nguyễn Van C",
+                                "year": 2001,
+                                "address": "Đà Nẵng",
+                                "email": "c@gmail.com",
+                                "phone": "0123456789",
+                                "sex": false,
+                                "status": 2,//1: chờ lớp, 2: đang học, 3: bảo lưu, 4: đình chỉ, 5: tốt nghiệp
+                            }
+                        ]
+                    },
+                    {
+                        "classId": "L002",
+                        "className": "JS230629",
+                        "descriptions": "Lớp học Fukuoka",
+                        "studentNumber": 29,
+                        "teacher": "Nguyễn Văn A",
+                        "status": 2, //1: chờ lớp, 2: hoạt động, 3: kết thúc
+                        "arrStudent": [
+                            {
+                                "studentId": "SV003",
+                                "studentName": "Nguyễn Van D",
+                                "year": 2000,
+                                "address": "Hà Nội",
+                                "email": "b@gmail.com",
+                                "phone": "0123456789",
+                                "sex": true,
+                                "status": 1,//1: chờ lớp, 2: đang học, 3: bảo lưu, 4: đình chỉ, 5: tốt nghiệp
+                            },
+                            {
+                                "studentId": "SV004",
+                                "studentName": "Nguyễn Van E",
+                                "year": 2001,
+                                "address": "Đà Nẵng",
+                                "email": "c@gmail.com",
+                                "phone": "0123456789",
+                                "sex": false,
+                                "status": 2,//1: chờ lớp, 2: đang học, 3: bảo lưu, 4: đình chỉ, 5: tốt nghiệp
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+        let userSystem = [
+            { "userId": 1, "email": "user1@gmail.com", "password": "012345", "address": "VN" },
+            { "userId": 2, "email": "user2@gmail.com", "password": "234567", "address": "JP" }
+        ];
+        localStorage.setItem("studentManagementStore", JSON.stringify(studentManagementStore));
+        localStorage.setItem("userSystem", JSON.stringify(userSystem));
+    </script>
+</body>
+
+</html>
